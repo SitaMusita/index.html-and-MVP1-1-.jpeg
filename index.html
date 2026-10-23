@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="LearnReach helps schools, tutors, training centres, and online course creators reach more students through focused digital marketing.">
+  <title>LearnReach | More Students. Greater Impact.</title>
+  <style>
+    :root{--blue:#0866d9;--navy:#0b2f69;--sky:#eaf5ff;--ink:#16345d;--muted:#5d6f88;--gold:#ffcf32;--white:#fff;--green:#12a66a}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Inter,Arial,Helvetica,sans-serif;color:var(--ink);background:#fff;line-height:1.6}
+    a{color:inherit;text-decoration:none}.container{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #e3edf8}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:76px}
+    .brand{display:flex;align-items:center;gap:10px;font-weight:900;color:var(--navy);font-size:1.5rem;letter-spacing:-.7px}
+    .logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#0d77f2,#0848a6);display:grid;place-items:center;color:#fff;font-size:1.4rem;box-shadow:0 8px 20px #0866d933}
+    .brand small{display:block;font-size:.62rem;letter-spacing:.2px;color:#59718f;font-weight:600;margin-top:-5px}
+    .links{display:flex;align-items:center;gap:25px;font-size:.92rem;font-weight:700}.links a:hover{color:var(--blue)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 20px;border-radius:999px;background:var(--blue);color:#fff;font-weight:800;border:0;cursor:pointer;box-shadow:0 8px 18px #0866d926;transition:.2s}
+    .btn:hover{background:#0753b2;transform:translateY(-1px)}.btn.secondary{background:#fff;color:var(--blue);border:1px solid #b9d7fb;box-shadow:none}
+    .menu{display:none;background:#eef6ff;border:0;border-radius:10px;padding:9px 12px;color:var(--navy);font-size:1.2rem}
+    .hero{padding:68px 0 62px;background:radial-gradient(circle at 88% 18%,#d7ecff 0,transparent 30%),linear-gradient(120deg,#f4faff,#fff 58%,#f5fbff);overflow:hidden}
+    .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center}
+    .eyebrow{display:inline-flex;gap:8px;align-items:center;color:var(--blue);font-weight:900;text-transform:uppercase;letter-spacing:1.3px;font-size:.77rem;background:#e6f2ff;border-radius:99px;padding:7px 12px}
+    h1{font-size:clamp(2.6rem,5.4vw,4.65rem);line-height:1.04;letter-spacing:-2.4px;color:var(--navy);margin:20px 0}
+    h1 span{color:var(--blue)}.lead{font-size:1.12rem;color:#536982;max-width:570px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:27px 0 24px}
+    .proof{display:flex;align-items:center;gap:12px;color:#506781;font-size:.9rem}.proof-icon{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:#ddf8ec;color:#078b58;font-weight:900}
+    .hero-art{position:relative;min-height:440px;display:grid;place-items:center}
+    .photo{width:100%;height:420px;object-fit:cover;border-radius:32px;box-shadow:0 28px 70px #0b2f6928;border:8px solid #fff}
+    .floating{position:absolute;background:#fff;border:1px solid #e3eef9;border-radius:18px;padding:15px 18px;box-shadow:0 16px 35px #0b2f6917;max-width:220px}
+    .floating strong{display:block;color:var(--navy)}.floating span{font-size:.82rem;color:var(--muted)}.float-one{left:-25px;top:28px}.float-two{right:-18px;bottom:28px}
+    .floating .mini-icon{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#e8f3ff;color:var(--blue);margin-right:8px}
+    .section{padding:82px 0}.section.tint{background:#f5faff}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.section-head h2{font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.15;letter-spacing:-1.2px;color:var(--navy);margin:13px 0}.section-head p{color:var(--muted);margin:0}
+    .problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:42px;align-items:center}.problem-card{padding:28px;background:#fff;border:1px solid #e0edf9;border-radius:24px;box-shadow:0 15px 45px #103e7010}
+    .problem-item{display:flex;gap:14px;margin:17px 0}.xicon{flex:0 0 34px;width:34px;height:34px;border-radius:50%;background:#fff0f0;color:#e74b5b;display:grid;place-items:center;font-weight:900}.checkicon{background:#e3f9ef;color:#07915b}
+    .solution{margin-top:20px;background:#eaf5ff;border-radius:17px;padding:18px;display:flex;gap:14px;color:#164a91}
+    .solution b{display:block;color:var(--navy)}.big-stat{font-size:4.5rem;font-weight:900;letter-spacing:-3px;color:var(--blue);line-height:1}.stat-note{font-size:1rem;color:var(--muted);max-width:320px}
+    .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{padding:25px 22px;background:#fff;border:1px solid #e2edf8;border-radius:22px;transition:.22s}.service:hover{transform:translateY(-5px);box-shadow:0 18px 35px #164a9112;border-color:#b5d7ff}
+    .service-icon{height:49px;width:49px;border-radius:15px;background:#e6f2ff;display:grid;place-items:center;font-size:1.45rem;margin-bottom:17px}.service:nth-child(2) .service-icon{background:#ffe8f2}.service:nth-child(3) .service-icon{background:#e4f8ee}.service:nth-child(4) .service-icon{background:#fff2d9}
+    .service h3{color:var(--navy);font-size:1.05rem;margin:0 0 8px}.service p{font-size:.91rem;color:var(--muted);margin:0}
+    .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;counter-reset:step}.step{padding:27px;border-radius:22px;background:#fff;border:1px solid #e0edf9}.step-number{display:grid;place-items:center;width:44px;height:44px;border-radius:14px;background:var(--blue);color:#fff;font-weight:900;font-size:1.15rem;margin-bottom:17px}.step h3{color:var(--navy);margin:0 0 8px}.step p{color:var(--muted);font-size:.94rem;margin:0}
+    .audiences{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:26px}.pill{background:#fff;border:1px solid #dceafa;border-radius:999px;padding:10px 16px;font-weight:800;color:#27517f;font-size:.9rem}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:45px;align-items:center}.demo-image{width:100%;display:block;border-radius:22px;border:1px solid #d8e8f8;box-shadow:0 20px 45px #0b2f6916}.check-list{padding:0;list-style:none}.check-list li{display:flex;gap:10px;margin:12px 0;color:#506781}.tick{color:var(--green);font-weight:900}
+    .contact-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;align-items:start}.contact-info{background:linear-gradient(145deg,#0c3a7d,#0870e7);color:#fff;border-radius:26px;padding:32px}.contact-info h3{font-size:1.65rem;line-height:1.2;margin-top:0}.contact-info p{color:#dcecff}.contact-info .contact-line{margin-top:23px;font-weight:700}
+    form{background:#fff;border:1px solid #dfeaf7;border-radius:26px;padding:30px;box-shadow:0 18px 50px #103e700c}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.field{display:flex;flex-direction:column;gap:7px;margin-bottom:16px}.field.full{grid-column:1/-1}.field label{font-size:.87rem;font-weight:800;color:var(--navy)}input,textarea,select{font:inherit;padding:13px 14px;border:1px solid #d5e2f1;border-radius:12px;background:#fbfdff;outline:none;color:var(--ink);width:100%}input:focus,textarea:focus,select:focus{border-color:#5ca6ff;box-shadow:0 0 0 3px #0866d918}textarea{min-height:130px;resize:vertical}.form-note{font-size:.8rem;color:#6b7e94;margin-top:10px}
+    .footer{background:#092a5d;color:#d6e6fb;padding:27px 0}.footer-row{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}.footer .brand{color:#fff}.footer .brand small{color:#b9d3f4}.footer p{margin:0;font-size:.86rem}
+    .notice{display:none;margin-top:14px;padding:12px;border-radius:12px;background:#e4f8ee;color:#096c47;font-weight:700}
+    @media(max-width:900px){.hero-grid,.problem-grid,.about-grid,.contact-wrap{grid-template-columns:1fr}.hero-art{min-height:370px}.photo{height:370px}.cards{grid-template-columns:repeat(2,1fr)}.float-one{left:5px}.float-two{right:5px}.steps{grid-template-columns:1fr}}
+    @media(max-width:650px){.nav{min-height:68px}.menu{display:block}.links{display:none;position:absolute;top:68px;left:0;right:0;padding:20px 5%;background:#fff;border-bottom:1px solid #e3edf8;flex-direction:column;align-items:stretch;gap:15px}.links.open{display:flex}.links .btn{width:100%}.brand{font-size:1.25rem}.hero{padding:44px 0}.hero-grid{gap:26px}h1{letter-spacing:-1.5px}.hero-art{min-height:300px}.photo{height:300px;border-width:5px;border-radius:24px}.floating{padding:10px 12px;max-width:185px}.float-one{top:8px}.float-two{bottom:8px}.section{padding:60px 0}.cards{grid-template-columns:1fr}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.problem-card,form,.contact-info{padding:22px}.big-stat{font-size:3.7rem}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="LearnReach home"><span class="logo">✦</span><span>LearnReach<small>More Students · Greater Impact</small></span></a>
+    <button class="menu" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav class="links" id="navLinks" aria-label="Main navigation">
+      <a href="#home">Home</a><a href="#services">Services</a><a href="#about">About</a><a href="#why">Why Us</a><a href="#contact">Contact</a>
+      <a class="btn" href="#contact">Get Started <span>↗</span></a>
+    </nav>
+  </div>
+</header>
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-grid">
+      <div>
+        <div class="eyebrow">🎓 Education marketing & student recruitment</div>
+        <h1>Helping educational businesses <span>reach more students.</span></h1>
+        <p class="lead">We help schools, tutors, training centres, and online course creators improve visibility, connect with the right learners, and turn interest into enrolments.</p>
+        <div class="hero-actions"><a class="btn" href="#services">Explore Our Services <span>→</span></a><a class="btn secondary" href="#contact">Contact Us</a></div>
+        <div class="proof"><span class="proof-icon">✓</span><span>Clear messaging. Focused campaigns. Greater learning opportunities.</span></div>
+      </div>
+      <div class="hero-art">
+        <img class="photo" src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=85" alt="Students learning together in a classroom">
+        <div class="floating float-one"><span class="mini-icon">◎</span><strong>Reach the right learners</strong><span>Build awareness for your programmes</span></div>
+        <div class="floating float-two"><span class="mini-icon">↗</span><strong>Grow enrolments</strong><span>Make it easier for students to find you</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="why">
+    <div class="container problem-grid">
+      <div>
+        <div class="eyebrow">The challenge</div><h2 style="font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.15;color:var(--navy);letter-spacing:-1px">Great learning deserves to be discovered.</h2>
+        <p class="lead">Many education providers offer valuable opportunities but struggle to reach the people who need them most.</p>
+        <div class="problem-card">
+          <div class="problem-item"><span class="xicon">×</span><div><b>Low visibility</b><br><span style="color:var(--muted)">The right students may not know your programme exists.</span></div></div>
+          <div class="problem-item"><span class="xicon">×</span><div><b>Too few qualified leads</b><br><span style="color:var(--muted)">Enquiries may not come from learners ready to join.</span></div></div>
+          <div class="problem-item"><span class="xicon">×</span><div><b>Enrolment challenges</b><br><span style="color:var(--muted)">Interest does not always turn into registrations.</span></div></div>
+          <div class="solution"><span style="font-size:1.8rem">💡</span><div><b>LearnReach helps close the gap.</b>Focused, accessible marketing helps education providers communicate value and guide prospective students toward the next step.</div></div>
+        </div>
+      </div>
+      <div style="padding:15px 5%">
+        <div class="big-stat">More<span style="color:var(--gold)"> reach.</span></div>
+        <h3 style="font-size:1.7rem;color:var(--navy);margin:7px 0">More meaningful connections.</h3>
+        <p class="stat-note">Our goal is to help education providers build awareness, attract relevant enquiries, and make learning opportunities easier to discover.</p>
+        <div class="audiences" style="justify-content:flex-start"><span class="pill">Schools</span><span class="pill">Tutors</span><span class="pill">Training centres</span><span class="pill">Online course creators</span></div>
+      </div>
+    </div>
+  </section>
+  <section class="section tint" id="services">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">What we do</div><h2>Digital marketing built around education</h2><p>Practical services that help educational businesses tell their story, connect with learners, and promote programmes.</p></div>
+      <div class="cards">
+        <article class="service"><div class="service-icon">📣</div><h3>Digital Advertising</h3><p>Promote courses and programmes with targeted campaigns designed to reach relevant audiences.</p></article>
+        <article class="service"><div class="service-icon">👥</div><h3>Social Media Marketing</h3><p>Build your brand online and engage prospective students with useful, consistent content.</p></article>
+        <article class="service"><div class="service-icon">✍️</div><h3>Content Creation</h3><p>Tell your education story through clear posts, campaign messages, and programme highlights.</p></article>
+        <article class="service"><div class="service-icon">🎯</div><h3>Student Enrolment Campaigns</h3><p>Guide interested learners from first discovery to an enquiry or registration.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="about">
+    <div class="container about-grid">
+      <div>
+        <img class="demo-image" src="MVP1(1).jpeg" alt="LearnReach MVP demo overview showing the website concept and core features" onerror="this.style.display='none'">
+        <div style="font-size:.8rem;color:#6a7e95;margin-top:9px">LearnReach MVP demo concept</div>
+      </div>
+      <div>
+        <div class="eyebrow">Meet LearnReach</div><h2 style="font-size:clamp(2rem,3.5vw,2.8rem);line-height:1.15;color:var(--navy);letter-spacing:-1px">A simple first step toward bigger impact.</h2>
+        <p class="lead">LearnReach is an education marketing and student recruitment venture founded by Ferdinand Hasingizwumukiza as part of ALX Founder Academy.</p>
+        <p>Our mission is to help education providers communicate their value clearly and reach more learners through accessible digital marketing services.</p>
+        <ul class="check-list"><li><span class="tick">✓</span> Clear information about services</li><li><span class="tick">✓</span> A straightforward way for potential clients to get in touch</li><li><span class="tick">✓</span> A focused starting point for testing customer needs and improving the offer</li></ul>
+        <a class="btn" href="#contact">Let's work together <span>→</span></a>
+      </div>
+    </div>
+  </section>
+  <section class="section tint">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">How it works</div><h2>From first conversation to student reach</h2><p>A clear, collaborative process to understand your goals and shape a focused campaign.</p></div>
+      <div class="steps">
+        <article class="step"><div class="step-number">1</div><h3>Tell us your goals</h3><p>Share your programme, target learners, current challenges, and what success would look like.</p></article>
+        <article class="step"><div class="step-number">2</div><h3>Plan the right approach</h3><p>Choose the most relevant services, messages, channels, and campaign priorities for your audience.</p></article>
+        <article class="step"><div class="step-number">3</div><h3>Launch and learn</h3><p>Review enquiries and feedback, understand what is working, and improve the campaign over time.</p></article>
+      </div>
+    </div>
+  </section>
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head"><div class="eyebrow">Get in touch</div><h2>Let's help more learners find you.</h2><p>Tell us a little about your educational business and the students you want to reach.</p></div>
+      <div class="contact-wrap">
+        <div class="contact-info"><h3>Your success is our mission.</h3><p>Have a course, training programme, or school initiative you want more people to discover? Start a conversation with LearnReach.</p><div class="contact-line">✉️ &nbsp; sitamusita@eduonline.com</div><div class="contact-line">🎓 &nbsp; Education marketing & student recruitment</div><p style="font-size:.88rem;margin-top:30px">We welcome enquiries from schools, tutors, training centres, and online course creators.</p></div>
+        <form id="contactForm">
+          <div class="form-grid">
+            <div class="field"><label for="name">Full name *</label><input id="name" name="name" autocomplete="name" required placeholder="Your full name"></div>
+            <div class="field"><label for="email">Email address *</label><input id="email" name="email" type="email" autocomplete="email" required placeholder="you@example.com"></div>
+            <div class="field full"><label for="organisation">School / organisation</label><input id="organisation" name="organisation" placeholder="Your organisation (optional)"></div>
+            <div class="field full"><label for="service">What do you need help with?</label><select id="service" name="service"><option>Choose a service</option><option>Digital advertising</option><option>Social media marketing</option><option>Content creation</option><option>Student enrolment campaign</option><option>Not sure yet — let's discuss</option></select></div>
+            <div class="field full"><label for="message">Your message *</label><textarea id="message" name="message" required placeholder="Tell us about your programme and goals..."></textarea></div>
+          </div>
+          <button class="btn" type="submit">Send Enquiry <span>→</span></button>
+          <p class="form-note">This demo opens your email app with your enquiry prepared. It does not store submissions on this website.</p>
+          <div class="notice" id="formNotice" role="status">Your email draft is ready to send in your email app.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="footer"><div class="container footer-row"><a class="brand" href="#home"><span class="logo">✦</span><span>LearnReach<small>More Students · Greater Impact</small></span></a><p>© <span id="year"></span> LearnReach. Better marketing. More students. Brighter futures.</p><a href="#home">Back to top ↑</a></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');
+  menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));});
+  navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}));
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('contactForm').addEventListener('submit',function(e){
+    e.preventDefault();
+    const f=new FormData(this);
+    const subject=encodeURIComponent('LearnReach enquiry from '+f.get('name'));
+    const body=encodeURIComponent('Name: '+f.get('name')+'\nEmail: '+f.get('email')+'\nOrganisation: '+(f.get('organisation')||'Not provided')+'\nService: '+f.get('service')+'\n\nMessage:\n'+f.get('message'));
+    document.getElementById('formNotice').style.display='block';
+    window.location.href='mailto:sitamusita@eduonline.com?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
